@@ -40,3 +40,10 @@ if (parameters.threeDigits) {
 		$('.line2').text(pageError);
 	}
 }
+
+if (parameters.server) {
+	$('.visit-link')
+		.removeClass('hidden')
+		.attr('href', 'http://' + parameters.server)
+		.text("Visit " + parameters.server);
+}
