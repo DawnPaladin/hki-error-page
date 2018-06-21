@@ -15,4 +15,28 @@ if (document.location.toString().indexOf('?') !== -1) {
 if (parameters.threeDigits) {
 	$('img.raven').attr('alt', "Quoth the raven");
 	$('.error-code').text(parameters.threeDigits).removeClass('hidden');
+
+	var pageError;
+	switch (parameters.threeDigits) {
+		case "404":
+			pageError = "cannot be found.";
+			break;
+		case "403":
+			pageError = "is forbidden.";
+			break;
+		case "401":
+			pageError = "requires authentication.";
+			break;
+		case "500":
+			pageError = "cannot be displayed.";
+			break;
+		default:
+			pageError = "is unavailable.";
+	}
+	
+	if (parameters.path) {
+		$('.line1').text("but the page at");
+		$('.path').text(parameters.path);
+		$('.line2').text(pageError);
+	}
 }
