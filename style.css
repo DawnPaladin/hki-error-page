@@ -15,6 +15,10 @@ body {
 	display: none !important;
 }
 
+.logo {
+	width: 40px;
+}
+
 .visit-link {
 	display: inline-block;
 	background: rgba(255, 255, 255, .75);
