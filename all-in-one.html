@@ -25,10 +25,20 @@
 			display: none !important;
 		}
 
+		.path {
+			overflow-wrap: break-word;
+		}
+
 		.visit-link {
 			display: inline-block;
 			background: rgba(255, 255, 255, .75);
 			padding: .5em 1em;
+		}
+
+		@media (max-height: 700px) {
+			.error-bird {
+				display: none;
+			}
 		}
 
 		.error-bird {
