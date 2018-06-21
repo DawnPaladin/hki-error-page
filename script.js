@@ -13,7 +13,7 @@ if (document.location.toString().indexOf('?') !== -1) {
 }
 
 if (parameters.threeDigits) {
-	$('img.raven').attr('alt', "Quoth the raven");
+	$('.raven title').text("quoth the raven");
 	$('.error-code').text(parameters.threeDigits).removeClass('hidden');
 
 	var pageError;
